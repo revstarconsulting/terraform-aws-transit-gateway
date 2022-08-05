@@ -9,4 +9,4 @@ data "aws_ec2_transit_gateway_vpn_attachment" "this" {
 
 }
 
-
+data "aws_ec2_transit_gateway" "this" {}

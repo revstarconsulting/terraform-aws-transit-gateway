@@ -39,5 +39,5 @@ resource "aws_route" "this" {
 
   route_table_id         = each.key
   destination_cidr_block = each.value
-  transit_gateway_id     = aws_ec2_transit_gateway.this[0].id
+  transit_gateway_id     = var.create_tgw ? aws_ec2_transit_gateway.this[0].id : data.aws_ec2_transit_gateway.this.id
 }
