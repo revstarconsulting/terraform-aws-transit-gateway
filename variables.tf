@@ -197,6 +197,7 @@ variable "ram_tags" {
   default     = {}
 }
 
+
 variable "environment" {
   description = "Provide appropriate environment name"
   type        = string
@@ -210,10 +211,11 @@ variable "environment" {
       "prod",
       "sandbox",
       "transit",
-      "shared"
+      "shared",
+      "test"
     ], var.environment)
 
-    error_message = "The environment value is not valid. Valid values are dev/development/uat/prod/production/sandbox/transit/shared."
+    error_message = "The environment value is not valid. Valid values are dev/development/uat/test/prod/production/sandbox/transit/shared."
   }
 }
 
